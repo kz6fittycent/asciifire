@@ -8,7 +8,7 @@ confinement: strict # use 'strict' once you have the right plugs
 
 apps:
   asciifire:
-    command: asciifire.py
+    command: $SNAP/asciifire.py
     plugs:
       - home
      
