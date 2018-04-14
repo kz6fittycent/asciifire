@@ -1,0 +1,25 @@
+name: asciifire # check to see if it's available
+version: '1.0+git' # this is freakin' awesome
+summary: ASCII art animated fire # 79 char long summary
+description: |
+  Keep warm during long cold nights with a fire...in your terminal.
+grade: stable # must be 'stable' to release into candidate/stable channels
+confinement: strict # use 'strict' once you have the right plugs
+
+apps:
+  asciifire:
+    command: asciifire
+    plugs:
+      - home
+     
+parts: 
+  my-part:
+    source: https://github.com/kz6fittycent/asciifire
+    source-type: git
+    plugin: python
+    
+    build-packages:
+      - python
+      
+    stage-packages:
+      - python
